@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+   <div class="sumain">
+    <div class="subody">
+        <h1>Thanks <span class="thnspan">You</span></h1>
+        <p>Successfully Done...</p>
+        <div class="subtn">
+            <a href="{% url '/' %}"><button>Home</button></a>
+            <a href="{% url 'revied' %}"><button>Show Reviews</button></a>
+        </div>
+   </div>
+   </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="chatmain">
+    <div class="chatbody">
+        <h2>Compose your comments</h2>
+        <form method="post">{% csrf_token %}
+            {{form.as_p}}
+            <button class="subbtn" type="submit">Submit</button>            
+        </form>        
+        <a href="{% url 'revied' %}"><button>Show Reviews</button></a>
+    </div>
+</div>
+{% endblock %}

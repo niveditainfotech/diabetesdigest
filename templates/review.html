@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="rebody">
+    <h2>Reviews</h2>
+    <div class="rebody2">
+        {% for i in data %}
+        <div class="rebody3">
+            <h4>{{i.Name}}</h4>
+            <h5>{{i.Designation}}</h5>
+            <p>{{i.Review}}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="{% url '/' %}"><button>Home</button></a>
+</div>
+{% endblock %}

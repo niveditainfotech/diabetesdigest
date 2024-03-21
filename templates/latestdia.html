@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="mainlate">
+    <div class="lateblur">
+        <div class="nlink">
+            <h2>LATEST NEWS IN DIABETES</h2>            
+            <ul>
+                {% for i in data %}
+                <li>{{i.Description}} <a href="//{{i.Link}}" target="_blank"><button>Read NEWS</button></a></li>
+                {% endfor %}
+            </ul>
+            
+        </div>
+    </div>
+</section>
+{% endblock %}

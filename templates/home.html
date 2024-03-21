@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="booddy">
+    <h1 class="hometit"><span class="homespan">D</span>iabetes <span class="homespan">D</span>igest</h1>
+    <div class="blogo">
+        <img src="{% static 'logo/loog.png' %}" alt="">
+    </div>
+    <div class="head1">
+        <h1><span class="wespan">W</span>elcome</h1>
+        <p>Live your best life with our diabetic support team!</p>
+        <div class="btn-1">
+            <a href="{% url 'blog' %}"><button>Blogs</button></a>
+            <a href="{% url 'chat' %}"><button>Comments</button></a>            
+        </div>
+    </div>
+</div>
+<section class="aboutsec">
+    <div class="abtit">
+        <h2>About</h2>
+    </div>
+    <div class="abbody">
+        <p><span>Harnishya Palanichamy</span> is in Grade 11 at The International School Bangalore, Bengaluru, India. She's passionate about the field
+             of computer science and is fluent in the coding languages- Java and Java script. She's an aspiring <span>programmer</span> having started her 
+             coding journey by coding games using Java script and then developing her knowledge by building a medial <span>chatbot</span> for her dad's diabetic 
+             patient community. She holds the credit of possessing 3 <span>research papers</span> published in the International Journals for High school students.
+              She is an <span>editor</span> for the Young Scientist <span>Journal</span> and the <span>Questioz magazine</span> . In her free time, she enjoys playing football and is an avid 
+              football fan and watching crime series. Currently she is working on an <span>app</span> for <span>women with gestational diabetes</span> - aiming to guide and aid 
+              them through their pregnancy journey. In the future, she has a desire to integrate computer science and business to create impact where it
+               really matters.</p>
+    </div>
+</section>
+<section class="reviewsec">
+    <div class="chatmain">
+        <div class="chatbody">
+            <h2>Share your comments</h2>
+            <form method="post">{% csrf_token %}
+                {{form.as_p}}
+                <button class="subbtn" type="submit">Submit</button>            
+            </form>        
+            <a href="{% url 'revied' %}"><button>Show Reviews</button></a>
+        </div>
+       </div>
+</section>
+<section class="contact">
+    <h2 class="contit">Contact</h2>
+    <div class="lins">
+        <div class="mail">
+            <p>E-mail : <a href="mailto:___@gmail.com">lathapala2017@gmail.com</a></p>
+            <p>Phone No : <a href="tel:867785278">+91-9894139510</a></p> 
+        </div>
+        <div class="link">
+            <ul class="social-link">
+                <a href="https://www.instagram.com/harnishyaa/" target="_blank" class="instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="instagram"><linearGradient id="a" x1="1.464" x2="14.536" y1="14.536" y2="1.464" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><path fill="url(#a)" d="M11 0H5a5 5 0 0 0-5 5v6a5 5 0 0 0 5 5h6a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zm3.5 11c0 1.93-1.57 3.5-3.5 3.5H5c-1.93 0-3.5-1.57-3.5-3.5V5c0-1.93 1.57-3.5 3.5-3.5h6c1.93 0 3.5 1.57 3.5 3.5v6z"></path><linearGradient id="b" x1="5.172" x2="10.828" y1="10.828" y2="5.172" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><path fill="url(#b)" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5A2.503 2.503 0 0 1 5.5 8c0-1.379 1.122-2.5 2.5-2.5s2.5 1.121 2.5 2.5c0 1.378-1.122 2.5-2.5 2.5z"></path><linearGradient id="c" x1="11.923" x2="12.677" y1="4.077" y2="3.323" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><circle cx="12.3" cy="3.7" r=".533" fill="url(#c)"></circle></svg><p>Instagram</p></a>
+                <a href="https://www.linkedin.com/in/harnishya-palanichamy-867785278/" target="_blank" class="Linkdin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.87 28.87" id="linkedin"><g data-name="Layer 2"><g data-name="Layer 1"><rect width="28.87" height="28.87" fill="#0b86ca" rx="6.48" ry="6.48"></rect><path fill="#fff" d="M8 12h3v9.68H8zm1.53-4.81a1.74 1.74 0 11-1.74 1.75 1.74 1.74 0 011.74-1.75M12.92 12h2.89v1.32a3.16 3.16 0 012.85-1.56c3 0 3.61 2 3.61 4.61v5.31h-3V17c0-1.12 0-2.57-1.56-2.57s-1.8 1.22-1.8 2.48v4.79h-3z"></path></g></g></svg><p>LinkedIn</p></a>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

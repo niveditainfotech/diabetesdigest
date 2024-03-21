@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="blogbody">
+<div class="masthead">
+  <h3> Welcome To Blog Page</h3>
+</div>
+<div class="contain">
+  <div class="row">
+      {% for post in post_list %}
+        <div class="card-body">
+          <h2 class="posttit"><a href="{% url 'post_detail' post.slug  %}">{{ post.title }}</a></h2>
+          <p class="author"> Harnishya| {{ post.created_on}} </p>
+          <p class="postd">{{post.content|slice:":200"}}</p>
+          <div class="mbtn">
+            <a href="{% url 'post_detail' post.slug  %}"><button class="morebtn">Read More</button></a>
+          </div>
+          
+        </div>
+      {% endfor %}    
+  </div>
+</div>
+</div>
+{%endblock%}
